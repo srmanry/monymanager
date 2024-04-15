@@ -1,16 +1,18 @@
 import 'package:flutter/material.dart';
 
-class IncomeReportScreen extends StatelessWidget {
-  const IncomeReportScreen({super.key});
+class ExprenessReportScreen extends StatelessWidget {
+  const ExprenessReportScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
+          backgroundColor: Color(0xfffDFE2E7),
           appBar: AppBar(
-            backgroundColor: Colors.green,
+            backgroundColor: Colors.amber,
+            //  backgroundColor: Color(0xfffDFE2E7),
             centerTitle: true,
-            title: const Text("Icome Report"),
+            title: const Text("Express Report"),
             actions: [],
           ),
           body: Column(children: [
@@ -25,7 +27,7 @@ class IncomeReportScreen extends StatelessWidget {
                         Material(
                           child: Container(
                             height: 50,
-                            color: Colors.green,
+                            color: Colors.amber,
                             child: Center(
                               child: TabBar(
                                   indicator: BoxDecoration(
@@ -50,12 +52,12 @@ class IncomeReportScreen extends StatelessWidget {
                                     Tab(
                                       child: Container(
                                         height: 35,
-                                        decoration: BoxDecoration(
-                                          borderRadius:
-                                              BorderRadius.circular(10),
-                                          border: Border.all(
-                                              color: Colors.white, width: 1),
-                                        ),
+                                        decoration: const BoxDecoration(
+                                            //borderRadius:
+                                            // BorderRadius.circular(10),
+                                            // border: Border.all(
+                                            //     color: Colors.white, width: 0),
+                                            ),
                                         child: const Align(
                                           alignment: Alignment.center,
                                           child: Text("Daily "),
@@ -65,11 +67,12 @@ class IncomeReportScreen extends StatelessWidget {
                                     Tab(
                                       child: Container(
                                         height: 35,
-                                        decoration: BoxDecoration(
-                                            borderRadius:
-                                                BorderRadius.circular(10),
-                                            border: Border.all(
-                                                color: Colors.white)),
+                                        decoration: const BoxDecoration(
+                                            // borderRadius:
+                                            //     BorderRadius.circular(10),
+                                            // border: Border.all(
+                                            //     color: Colors.white)
+                                            ),
                                         child: const Align(
                                           alignment: Alignment.center,
                                           child: Text("Weelkly"),
@@ -79,11 +82,12 @@ class IncomeReportScreen extends StatelessWidget {
                                     Tab(
                                       child: Container(
                                         height: 35,
-                                        decoration: BoxDecoration(
-                                            borderRadius:
-                                                BorderRadius.circular(10),
-                                            border: Border.all(
-                                                color: Colors.white)),
+                                        decoration: const BoxDecoration(
+                                            // borderRadius:
+                                            //     BorderRadius.circular(10),
+                                            // border: Border.all(
+                                            //     color: Colors.white)
+                                            ),
                                         child: const Align(
                                           alignment: Alignment.center,
                                           child: Text("Monthly"),
@@ -93,11 +97,12 @@ class IncomeReportScreen extends StatelessWidget {
                                     Tab(
                                       child: Container(
                                         height: 35,
-                                        decoration: BoxDecoration(
-                                            borderRadius:
-                                                BorderRadius.circular(10),
-                                            border: Border.all(
-                                                color: Colors.white)),
+                                        decoration: const BoxDecoration(
+                                            // borderRadius:
+                                            //     BorderRadius.circular(10),
+                                            // border: Border.all(
+                                            //     color: Colors.white)
+                                            ),
                                         child: const Align(
                                           alignment: Alignment.center,
                                           child: Text("Yearly"),
@@ -134,7 +139,7 @@ class IncomeReportScreen extends StatelessWidget {
                           width: double.maxFinite,
                           decoration: BoxDecoration(
                               borderRadius: BorderRadius.circular(0),
-                              color: Colors.green),
+                              color: Colors.amber),
                           child: const Center(child: Text("INVOICE")
                               //  Text("Total  \$ 5000")
                               ),

@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:monymanger/express_report.dart';
 
+import 'income_report.dart';
+
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
 
@@ -9,7 +11,7 @@ class HomeScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
-        backgroundColor: Colors.green,
+        backgroundColor: Color(0xfff89DDFB),
         // appBar: AppBar(
         //   backgroundColor: Colors.green,
         //   title: Text("Mony Manager"),
@@ -22,7 +24,7 @@ class HomeScreen extends StatelessWidget {
               child: Center(
                 child: Text(
                   "Mony Manager",
-                  style: TextStyle(fontSize: 18, color: Colors.white),
+                  style: TextStyle(fontSize: 18, color: Colors.black),
                 ),
               ),
             ),
@@ -61,7 +63,10 @@ class HomeScreen extends StatelessWidget {
                           width: 180,
                           decoration: BoxDecoration(
                               borderRadius: BorderRadius.circular(5),
-                              color: Colors.green[400]),
+                              color: Colors.green[300]
+
+                              //  color: Colors.green[400]
+                              ),
                           child: const Column(
                             children: [
                               Text(" \$ 2500"),
@@ -77,11 +82,13 @@ class HomeScreen extends StatelessWidget {
                           width: 180,
                           decoration: BoxDecoration(
                               borderRadius: BorderRadius.circular(5),
-                              color: const Color.fromARGB(255, 244, 81, 81)),
+                              //color: Color(0xfff)
+                              //color: Color(0xfffFFBAD2),
+                              color: Colors.red[100]),
                           child: const Column(
                             children: [
                               Text(" \$ 2500"),
-                              Text("Income"),
+                              Text("Expreness"),
                             ],
                           ),
                         ),
@@ -92,22 +99,27 @@ class HomeScreen extends StatelessWidget {
                       child: Row(
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
-                          Container(
-                            height: 50,
-                            width: 180,
-                            decoration: BoxDecoration(
-                                borderRadius: BorderRadius.circular(5),
-                                color: Colors.green[400]),
-                            child: const Center(
-                                child: Text(
-                              "INCOME REPORTS",
-                              style:
-                                  TextStyle(fontSize: 14, color: Colors.white),
-                            )),
+                          InkWell(
+                            onTap: () {
+                              Get.to(() => IncomeReportScreen());
+                            },
+                            child: Container(
+                              height: 50,
+                              width: 180,
+                              decoration: BoxDecoration(
+                                  borderRadius: BorderRadius.circular(5),
+                                  color: Colors.green[400]),
+                              child: const Center(
+                                  child: Text(
+                                "INCOME REPORTS",
+                                style: TextStyle(
+                                    fontSize: 14, color: Colors.white),
+                              )),
+                            ),
                           ),
                           InkWell(
                             onTap: () {
-                              Get.to(const IncomeReportScreen());
+                              Get.to(const ExprenessReportScreen());
                             },
                             child: Container(
                               height: 50,
@@ -163,7 +175,7 @@ class HomeScreen extends StatelessWidget {
                     ),
                     InkWell(
                       onTap: () {
-                        Get.to(const IncomeReportScreen());
+                        Get.to(IncomeReportScreen());
                       },
                       child: Container(
                         height: 50,
